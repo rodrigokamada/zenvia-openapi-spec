@@ -37,3 +37,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: web_deploy
         enable_jekyll: true
+        keep_files: true
