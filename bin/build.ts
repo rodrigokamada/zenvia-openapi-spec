@@ -5,7 +5,6 @@ import { sync as mkdirp } from 'mkdirp';
 import { generateJSON, generateYAML, generateReDocPage } from './commons';
 
 async function build() {
-  console.log(`process.argv[2]=[${process.argv[2]}]`);
   const ncpAsync = promisify(ncp);
   const outDir = 'web_deploy';
   const branch = process.argv[2];
