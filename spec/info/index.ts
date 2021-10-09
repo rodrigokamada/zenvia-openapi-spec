@@ -4,7 +4,7 @@ import { rawLoad } from '../../utils/raw-load';
 const description = rawLoad(__dirname, './description.md');
 
 const info: InfoObject = {
-  version: '2.0.1',
+  version: '2.0.2',
   title: 'ZenAPI',
   description,
   termsOfService: 'https://zenvia.com/',
