@@ -5,7 +5,6 @@ on:
     branches:
     - '^(v[0-9]+(-beta)?|master)$'
 
-
 jobs:
   deploy:
     runs-on: ubuntu-latest

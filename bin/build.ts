@@ -6,11 +6,10 @@ import { generateJSON, generateYAML, generateReDocPage } from './commons';
 
 async function build() {
   console.log(`process.argv[2]=[${process.argv[2]}]`);
-  console.log(`process.env.TRAVIS_BRANCH=[${process.env.TRAVIS_BRANCH}]`);
 
   const ncpAsync = promisify(ncp);
   const outDir = 'web_deploy';
-  const branch = process.argv[2] ?? process.env.TRAVIS_BRANCH;
+  const branch = process.argv[2];
 
   if (branch === undefined || branch === 'master') {
     await ncpAsync('public', outDir);
