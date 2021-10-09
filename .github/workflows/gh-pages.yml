@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-    - '^(v[0-9]+(-beta)?|master)$'
+    - master
 
 jobs:
   deploy:
@@ -27,7 +27,7 @@ jobs:
       run: npm test
 
     - name: Build
-      run: npm run build:public ${GITHUB_REF#refs/heads/}
+      run: npm run build:public
 
     - name: Deploy
       if: success()
